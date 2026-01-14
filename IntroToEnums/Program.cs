@@ -16,7 +16,15 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Random rnd = new Random();
+
+            for (int i = 0; i < 7; i++)
+            {
+                CardValue cardValue = (CardValue)rnd.Next(2, 15);
+                Suit suit = (Suit)rnd.Next(4);
+
+                Console.WriteLine(cardValue + " of " + suit);
+            }
         }
     }
 }
