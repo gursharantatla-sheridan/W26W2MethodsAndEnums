@@ -50,11 +50,26 @@
 
             int[] myArr = { 3, 2, 4, 5, 6, 7, 87, 6, 4 };
             PrintArray(myArr);
+            PrintArray(3, 4, 4, 5, 6, 76, 7, 8, 7, 6, 5, 45, 4);
+
+
+
+            PersonInfo("John", 34);
+            PersonInfo(name: "John", age: 34);
+            PersonInfo(age: 34, name: "John");
+            PersonInfo("John");
+        }
+
+
+        // named arguments / optional args
+        static void PersonInfo(string name, int age = 18)
+        {
+            // method body
         }
 
 
         // parameter array
-        static void PrintArray(int[] arr)
+        static void PrintArray(params int[] arr)
         {
             Console.WriteLine("\n\nTotal number of items: " + arr.Length);
 
